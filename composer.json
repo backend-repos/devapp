@@ -24,7 +24,7 @@
     ],
     "psr-4": {
       "App\\": "app/",
-      "ShawnSandy\\Pages\\": "packages/shawnsandy/pages/src"
+      "ShawnSandy\\Pages\\": "packages/shawnsandy/pages/src/"
     }
   },
   "autoload-dev": {
