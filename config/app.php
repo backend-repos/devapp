@@ -151,6 +151,7 @@ return [
          * Packages
          */
         Barryvdh\Debugbar\ServiceProvider::class,
+        Laracasts\Utilities\JavaScript\JavaScriptServiceProvider::class,
 
         /*
          * Custom rolled classes
