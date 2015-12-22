@@ -150,7 +150,6 @@ return [
         /*
          * Packages
          */
-        Barryvdh\Debugbar\ServiceProvider::class,
         Laracasts\Utilities\JavaScript\JavaScriptServiceProvider::class,
 
         /*
@@ -210,8 +209,7 @@ return [
         'Storage'   => Illuminate\Support\Facades\Storage::class,
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
-        'View'      => Illuminate\Support\Facades\View::class,
-        'Debugbar'  => Barryvdh\Debugbar\Facade::class,
+        'View'      => Illuminate\Support\Facades\View::class
 
     ],
 
