@@ -154,7 +154,7 @@ return [
         Laracasts\Utilities\JavaScript\JavaScriptServiceProvider::class,
 
         /*
-         * Custom rolled classes
+         * Custom rolled packages
          */
         ShawnSandy\Pages\PagesServiceProvider::class,
 
