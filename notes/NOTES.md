@@ -42,7 +42,7 @@ Tinker Command
  >> true
  ```
 
- Display all users
+Now display all users
 
  ` >>> $users->all()`
 
