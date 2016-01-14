@@ -28,8 +28,8 @@ class StoryController extends Controller
      */
     public function index()
     {
-
-        return view('stories.index');
+        $stories = Story::all();
+        return view('stories.index', compact('stories'));
     }
 
     /**
@@ -51,6 +51,10 @@ class StoryController extends Controller
     public function store(Request $request)
     {
         //
+        $this->validate($request, [
+            'title' => 'required|max:255',
+            'content' => 'required|min:50'
+        ]);
     }
 
     /**
