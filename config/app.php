@@ -151,7 +151,8 @@ return [
          * Packages
          */
         Laracasts\Utilities\JavaScript\JavaScriptServiceProvider::class,
-
+        Barryvdh\Debugbar\ServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
         /*
          * Custom rolled packages
          */
@@ -209,7 +210,10 @@ return [
         'Storage'   => Illuminate\Support\Facades\Storage::class,
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
-        'View'      => Illuminate\Support\Facades\View::class
+        'View'      => Illuminate\Support\Facades\View::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
 
     ],
 
