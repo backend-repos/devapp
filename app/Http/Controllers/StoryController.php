@@ -40,6 +40,7 @@ class StoryController extends Controller
     public function create()
     {
         //
+        return view('stories.new-story');
     }
 
     /**
