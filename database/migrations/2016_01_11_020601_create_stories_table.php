@@ -17,7 +17,7 @@ class CreateStoriesTable extends Migration
             $table->integer('user_id');
             $table->text('content');
             $table->string('type', 30);
-            $table->string('title', 30);
+            $table->string('description', 255);
             $table->string('status', 25);
             $table->timestamps();
         });
