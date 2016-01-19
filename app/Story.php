@@ -8,7 +8,7 @@ class Story extends Model
 {
     //
 
-    protected $fillable = ["content"];
+    protected $fillable = ["content", "description","type","status","user_id"];
 
     public function user(){
         return $this->belongsTo(User::class);

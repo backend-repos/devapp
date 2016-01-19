@@ -4,22 +4,28 @@ namespace App\Http\Controllers;
 
 use App\Story;
 use App\User;
+use DebugBar\DebugBar;
 use Illuminate\Http\Request;
+
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Repositories\StoryRepository;
 
 class StoryController extends Controller
 {
+
+    protected $stories;
     /**
      * Create a new controller instance.
      *
      */
-    public function __construct()
+    public function __construct(StoryRepository $story)
     {
-       // $this->middleware('auth');
-    }
+        // $this->middleware('auth');
 
+        $this->stories = $story;
+    }
 
     /**
      * Display a listing of the resource.
@@ -28,7 +34,7 @@ class StoryController extends Controller
      */
     public function index()
     {
-        $stories = Story::all();
+        $stories = $this->stories->recentStories();
         return view('stories.index', compact('stories'));
     }
 
@@ -53,9 +59,14 @@ class StoryController extends Controller
     {
         //
         $this->validate($request, [
-            'title' => 'required|max:255',
-            'content' => 'required|min:50'
+            'description' => 'required|max:255',
+            'content' => 'min:50'
         ]);
+
+        $request->user()->story()->create(
+            $request->all()
+        );
+        return redirect('story')->with('status', 'You have successfully started a new Story');
     }
 
     /**
